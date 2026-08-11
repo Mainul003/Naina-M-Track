@@ -1,0 +1,265 @@
+{
+  "originalLandSale": 3375000,
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2025-01-01",
+      "type": "Opening Balance",
+      "details": "First land sale instalment",
+      "amountIn": 2500000,
+      "amountOut": 0,
+      "notes": "৳25 lakh received"
+    },
+    {
+      "id": 2,
+      "date": "2025-08-10",
+      "type": "Loan Given",
+      "details": "Riaz Loan",
+      "amountIn": 0,
+      "amountOut": 100000,
+      "notes": "Refundable",
+      "person": "Riaz"
+    },
+    {
+      "id": 3,
+      "date": "2025-09-10",
+      "type": "Saving/FDR",
+      "details": "Naina BRAC FDR",
+      "amountIn": 0,
+      "amountOut": 1000000,
+      "notes": "3 months, Acc: 1066151570001"
+    },
+    {
+      "id": 4,
+      "date": "2025-12-10",
+      "type": "Saving/FDR",
+      "details": "Naina BRAC FDR",
+      "amountIn": 0,
+      "amountOut": 1000000,
+      "notes": "3 months, Acc: 1066151570001"
+    },
+    {
+      "id": 5,
+      "date": "2026-01-05",
+      "type": "Spend",
+      "details": "Khoka bKash",
+      "amountIn": 0,
+      "amountOut": 20000,
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "date": "2026-01-06",
+      "type": "Spend",
+      "details": "Naina Mother bKash",
+      "amountIn": 0,
+      "amountOut": 5000,
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "date": "2026-01-07",
+      "type": "Spend",
+      "details": "Phone for Naina Mother",
+      "amountIn": 0,
+      "amountOut": 30000,
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "date": "2026-01-08",
+      "type": "Loan Given",
+      "details": "Shohorab Bhai",
+      "amountIn": 0,
+      "amountOut": 100000,
+      "notes": "Refundable",
+      "person": "Shohorab Bhai"
+    },
+    {
+      "id": 9,
+      "date": "2026-01-09",
+      "type": "Spend",
+      "details": "Fuad",
+      "amountIn": 0,
+      "amountOut": 62000,
+      "notes": ""
+    },
+    {
+      "id": 10,
+      "date": "2026-01-10",
+      "type": "Spend",
+      "details": "Naina",
+      "amountIn": 0,
+      "amountOut": 15000,
+      "notes": ""
+    },
+    {
+      "id": 11,
+      "date": "2026-09-03",
+      "type": "Loan Received",
+      "details": "Riaz Loan Paid / Returned",
+      "amountIn": 103200,
+      "amountOut": 0,
+      "interestAmount": 3200,
+      "notes": "৳1,00,000 principal + ৳3,200 interest",
+      "person": "Riaz"
+    },
+    {
+      "id": 12,
+      "date": "2025-09-03",
+      "type": "Spend",
+      "details": "Land Registration Fee paid by Fuad",
+      "amountIn": 0,
+      "amountOut": 3000,
+      "notes": ""
+    },
+    {
+      "id": 13,
+      "date": "2026-09-03",
+      "type": "Adjustment",
+      "details": "Rounded balance adjustment",
+      "amountIn": 0,
+      "amountOut": 200,
+      "notes": "Added only to match recorded balance"
+    },
+    {
+      "id": 14,
+      "date": "2026-05-20",
+      "type": "Spend",
+      "details": "Study Amount",
+      "amountIn": 0,
+      "amountOut": 150000,
+      "notes": ""
+    },
+    {
+      "id": 15,
+      "date": "2026-06-20",
+      "type": "Loan Given",
+      "details": "Loan to Mamun",
+      "amountIn": 0,
+      "amountOut": 100000,
+      "notes": "Refundable, 6 months",
+      "person": "Mamun"
+    },
+    {
+      "id": 16,
+      "date": "2026-03-07",
+      "type": "Loan Received",
+      "details": "Shohorab Bhai loan returned",
+      "amountIn": 100000,
+      "amountOut": 0,
+      "notes": "Received and sent to Riaz as new loan",
+      "person": "Shohorab Bhai"
+    },
+    {
+      "id": 17,
+      "date": "2026-03-07",
+      "type": "Loan Given",
+      "details": "Riaz Loan",
+      "amountIn": 0,
+      "amountOut": 100000,
+      "notes": "Refundable, 3 months; funded by Shohorab return",
+      "person": "Riaz"
+    },
+    {
+      "id": 18,
+      "date": "2026-07-16",
+      "type": "Money Added",
+      "details": "Second land sale instalment",
+      "amountIn": 875000,
+      "amountOut": 0,
+      "notes": "৳8.75 lakh received"
+    },
+    {
+      "id": 19,
+      "date": "2026-07-17",
+      "type": "Spend",
+      "details": "Send to Naina",
+      "amountIn": 0,
+      "amountOut": 10000,
+      "notes": "Naina Dutch Bangla Account"
+    },
+    {
+      "id": 20,
+      "date": "2026-07-22",
+      "type": "Spend",
+      "details": "Linda Apu account for Bed and Almira",
+      "amountIn": 0,
+      "amountOut": 5000,
+      "notes": "Noakhali"
+    },
+    {
+      "id": 21,
+      "date": "2026-07-22",
+      "type": "Spend",
+      "details": "Mamun Kozymart payment",
+      "amountIn": 0,
+      "amountOut": 1400,
+      "notes": ""
+    },
+    {
+      "id": 22,
+      "date": "2026-07-28",
+      "type": "Loan Given",
+      "details": "Loan to Mamun",
+      "amountIn": 0,
+      "amountOut": 100000,
+      "notes": "Refundable, 3 months",
+      "person": "Mamun"
+    },
+    {
+      "id": 23,
+      "date": "2026-08-03",
+      "type": "Saving/FDR",
+      "details": "Naina BRAC FDR",
+      "amountIn": 0,
+      "amountOut": 500000,
+      "notes": "3 months, Acc: 1066151570001"
+    },
+    {
+      "id": 24,
+      "date": "2026-08-08",
+      "type": "Loan Given",
+      "details": "Loan to Mamun",
+      "amountIn": 0,
+      "amountOut": 100000,
+      "notes": "Refundable, 3 months",
+      "person": "Mamun"
+    },
+    {
+      "id": 25,
+      "date": "2026-07-22",
+      "type": "Spend",
+      "details": "Linda Apu account for Bed and Almira",
+      "amountIn": 0,
+      "amountOut": 19000,
+      "notes": "Noakhali"
+    }
+  ],
+  "loanAccounts": [
+    {
+      "name": "Riaz",
+      "given": 200000,
+      "receivedPrincipal": 100000,
+      "interestEarned": 3200,
+      "status": "Pending",
+      "note": "All Riaz loans combined"
+    },
+    {
+      "name": "Shohorab Bhai",
+      "given": 100000,
+      "receivedPrincipal": 100000,
+      "interestEarned": 0,
+      "status": "Closed",
+      "note": "Returned in full"
+    },
+    {
+      "name": "Mamun",
+      "given": 300000,
+      "receivedPrincipal": 0,
+      "interestEarned": 0,
+      "status": "Pending",
+      "note": "Refundable loans"
+    }
+  ]
+}
