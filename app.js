@@ -13,9 +13,9 @@ const seed={
     {id:8,date:'2026-01-08',type:'Loan Given',details:'Shohorab Bhai',amountIn:0,amountOut:100000,notes:'Refundable',person:'Shohorab Bhai'},
     {id:9,date:'2026-01-09',type:'Spend',details:'Fuad',amountIn:0,amountOut:62000,notes:''},
     {id:10,date:'2026-01-10',type:'Spend',details:'Naina',amountIn:0,amountOut:15000,notes:''},
-    {id:11,date:'2026-09-03',type:'Loan Received',details:'Riaz Loan Paid / Returned',amountIn:103200,amountOut:0,interestAmount:3200,notes:'৳1,00,000 principal + ৳3,200 interest',person:'Riaz'},
+    {id:11,date:'2025-09-03',type:'Loan Received',details:'Riaz Loan Paid / Returned',amountIn:103200,amountOut:0,interestAmount:3200,notes:'৳1,00,000 principal + ৳3,200 interest',person:'Riaz'},
     {id:12,date:'2025-09-03',type:'Spend',details:'Land Registration Fee paid by Fuad',amountIn:0,amountOut:3000,notes:''},
-    {id:13,date:'2026-09-03',type:'Adjustment',details:'Rounded balance adjustment',amountIn:0,amountOut:200,notes:'Added only to match recorded balance'},
+    {id:13,date:'2025-09-03',type:'Adjustment',details:'Rounded balance adjustment',amountIn:0,amountOut:200,notes:'Added only to match recorded balance'},
     {id:14,date:'2026-05-20',type:'Spend',details:'Study Amount',amountIn:0,amountOut:150000,notes:''},
     {id:15,date:'2026-06-20',type:'Loan Given',details:'Loan to Mamun',amountIn:0,amountOut:100000,notes:'Refundable, 6 months',person:'Mamun'},
     {id:16,date:'2026-03-07',type:'Loan Received',details:'Shohorab Bhai loan returned',amountIn:100000,amountOut:0,notes:'Received and sent to Riaz as new loan',person:'Shohorab Bhai'},
@@ -40,9 +40,10 @@ function migrateData(saved){
   if(!saved)return structuredClone(seed);
   saved.originalLandSale=3375000;
   saved.transactions.forEach(x=>{if(x.person==='Riaz Loan 1'||x.person==='Riaz New Loan')x.person='Riaz';if(x.id===11&&!x.interestAmount)x.interestAmount=3200});
-  const riazRepayment=saved.transactions.find(x=>x.id===11);if(riazRepayment)riazRepayment.notes='৳1,00,000 principal + ৳3,200 interest';
+  const riazRepayment=saved.transactions.find(x=>x.id===11);if(riazRepayment){riazRepayment.date='2025-09-03';riazRepayment.notes='৳1,00,000 principal + ৳3,200 interest'}
   const firstInstalment=saved.transactions.find(x=>x.id===1);if(firstInstalment){firstInstalment.details='First land sale instalment';firstInstalment.notes='৳25 lakh received'}
   const registrationFee=saved.transactions.find(x=>x.id===12);if(registrationFee)registrationFee.date='2025-09-03';
+  const balanceAdjustment=saved.transactions.find(x=>x.id===13);if(balanceAdjustment)balanceAdjustment.date='2025-09-03';
   const secondInstalment=saved.transactions.find(x=>x.id===18);if(secondInstalment){secondInstalment.details='Second land sale instalment';secondInstalment.notes='৳8.75 lakh received'}
   const accounts=saved.loanAccounts||[],riaz=accounts.filter(x=>['Riaz','Riaz Loan 1','Riaz New Loan'].includes(x.name));
   const others=accounts.filter(x=>!['Riaz','Riaz Loan 1','Riaz New Loan'].includes(x.name)).map(x=>({...x,receivedPrincipal:x.receivedPrincipal??x.received??0,interestEarned:x.interestEarned||0}));
