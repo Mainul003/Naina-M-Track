@@ -1,0 +1,6 @@
+{
+  "name": "naina-money-tracker",
+  "private": true,
+  "type": "module",
+  "scripts": { "check": "node --check app.js && node --check api/_shared.js && node --check api/login.js && node --check api/logout.js && node --check api/data.js" }
+}
