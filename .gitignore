@@ -1,0 +1,5 @@
+# The original workbook contains private financial records and is not needed by the app.
+*.xlsx
+~$*.xlsx
+.env*
+!.env.example

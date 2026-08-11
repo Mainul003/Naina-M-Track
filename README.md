@@ -6,13 +6,28 @@ A private, browser-based tracker for land sale money, expenses, loans, and savin
 
 Open `index.html`, or start any static web server in this folder.
 
-## GitHub Pages
+## Deployment and permanent saving
 
-In the repository settings, open **Pages**, choose **Deploy from a branch**, select the `main` branch and `/ (root)`, then save.
+This version is deployed on Vercel because GitHub Pages cannot securely write commits. The application still stores every update in GitHub at `data/records.json`; each save, deletion, import, or reset creates a repository commit.
+
+1. Push this project to GitHub.
+2. Import that repository into Vercel.
+3. Create a fine-grained GitHub personal access token with **Contents: Read and write** access to only this repository.
+4. Add these Vercel environment variables:
+
+   - `GH_OWNER`: GitHub username or organization
+   - `GH_REPO`: repository name only
+   - `GH_BRANCH`: `main`
+   - `GH_TOKEN`: fine-grained GitHub token
+   - `SESSION_SECRET`: a long random value of at least 32 characters
+   - `APP_USER_ID`: `Naina03`
+   - `APP_PASSWORD_HASH`: SHA-256 hash of the login password
+
+5. Deploy. The first change made in the application creates `data/records.json`; subsequent changes update it with a new commit.
 
 ## Data and privacy
 
-- Records are saved in the browser's local storage; they do not sync between devices.
+- The latest records are loaded from GitHub and synchronize between devices.
 - Use **Backup & settings → Download backup** regularly.
-- This is a static app. Its login is a privacy screen, not secure server-side authentication. Do not publish sensitive source data in a public repository.
-- For genuinely private multi-device access, connect the UI to a backend with authentication and database storage (for example, Supabase or Firebase).
+- Login validation and the GitHub token run only in the Vercel server-side API.
+- If the repository is public, `data/records.json` and its full commit history are intentionally public.
