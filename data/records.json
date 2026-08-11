@@ -82,7 +82,9 @@
       "details": "Fuad",
       "amountIn": 0,
       "amountOut": 62000,
-      "notes": ""
+      "interestAmount": 0,
+      "notes": "Study 50K and others costing",
+      "person": ""
     },
     {
       "id": 10,
