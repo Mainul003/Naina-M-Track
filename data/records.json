@@ -95,7 +95,7 @@
     },
     {
       "id": 11,
-      "date": "2026-09-03",
+      "date": "2025-09-03",
       "type": "Loan Received",
       "details": "Riaz Loan Paid / Returned",
       "amountIn": 103200,
@@ -115,7 +115,7 @@
     },
     {
       "id": 13,
-      "date": "2026-09-03",
+      "date": "2025-09-03",
       "type": "Adjustment",
       "details": "Rounded balance adjustment",
       "amountIn": 0,
