@@ -234,17 +234,6 @@
       "amountIn": 0,
       "amountOut": 19000,
       "notes": "Noakhali"
-    },
-    {
-      "id": 1786465131787,
-      "date": "2026-08-11",
-      "type": "Money Added",
-      "details": "Add money",
-      "amountIn": 100,
-      "amountOut": 0,
-      "interestAmount": 0,
-      "notes": "Test",
-      "person": ""
     }
   ],
   "loanAccounts": [
