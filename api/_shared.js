@@ -12,21 +12,23 @@ function signature(value) {
   return crypto.createHmac('sha256', required('SESSION_SECRET')).update(value).digest('base64url');
 }
 
-export function createSession() {
-  const payload = Buffer.from(JSON.stringify({ exp: Date.now() + 7 * 86400000 })).toString('base64url');
+export function createSession(user) {
+  const payload = Buffer.from(JSON.stringify({ user, exp: Date.now() + 7 * 86400000 })).toString('base64url');
   return `${payload}.${signature(payload)}`;
 }
 
-export function isAuthorized(req) {
+export function sessionUser(req) {
   const cookies = Object.fromEntries((req.headers.cookie || '').split(';').map(x => x.trim().split('=')));
   const token = cookies[COOKIE_NAME];
-  if (!token) return false;
+  if (!token) return null;
   const [payload, sig] = token.split('.');
-  if (!payload || !sig) return false;
+  if (!payload || !sig) return null;
   const expected = signature(payload);
-  if (sig.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return false;
-  try { return JSON.parse(Buffer.from(payload, 'base64url')).exp > Date.now(); } catch { return false; }
+  if (sig.length !== expected.length || !crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected))) return null;
+  try { const session = JSON.parse(Buffer.from(payload, 'base64url')); return session.exp > Date.now() ? session.user : null; } catch { return null; }
 }
+
+export function isAuthorized(req) { return Boolean(sessionUser(req)); }
 
 export function sessionCookie(token) {
   return `${COOKIE_NAME}=${token}; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=604800`;
@@ -36,11 +38,13 @@ export function clearCookie() {
   return `${COOKIE_NAME}=; Path=/; HttpOnly; Secure; SameSite=Strict; Max-Age=0`;
 }
 
-export function passwordMatches(user, password) {
-  const expectedUser = process.env.APP_USER_ID || 'Naina03';
-  const expectedHash = required('APP_PASSWORD_HASH');
+export function profileForCredentials(user, password) {
+  const profiles = [
+    { id: 'naina', user: process.env.APP_USER_ID || 'Naina03', hash: required('APP_PASSWORD_HASH'), name: 'Naina', dataSource: 'github', editable: true },
+    { id: 'morsheda', user: process.env.MORSHEDA_USER_ID, hash: process.env.MORSHEDA_PASSWORD_HASH, name: 'Morsheda Begum', dataSource: 'environment', editable: false }
+  ].filter(profile => profile.user && profile.hash);
   const actualHash = crypto.createHash('sha256').update(password).digest('hex');
-  return user === expectedUser && actualHash.length === expectedHash.length && crypto.timingSafeEqual(Buffer.from(actualHash), Buffer.from(expectedHash));
+  return profiles.find(profile => user === profile.user && actualHash.length === profile.hash.length && crypto.timingSafeEqual(Buffer.from(actualHash), Buffer.from(profile.hash))) || null;
 }
 
 export async function githubFile() {

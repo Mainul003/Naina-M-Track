@@ -22,6 +22,7 @@ This version is deployed on Vercel because GitHub Pages cannot securely write co
    - `SESSION_SECRET`: a long random value of at least 32 characters
    - `APP_USER_ID`: `Naina03`
    - `APP_PASSWORD_HASH`: SHA-256 hash of the login password
+   - `MORSHEDA_USER_ID`, `MORSHEDA_PASSWORD_HASH`, `MORSHEDA_RECORDS_JSON`: the protected Morsheda account settings. Her records are deliberately loaded from Vercel environment variables and are read-only, so they are never committed to this public repository.
 
 5. Deploy. The first change made in the application creates `data/records.json`; subsequent changes update it with a new commit.
 

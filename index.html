@@ -16,8 +16,8 @@
     <section class="login-card">
       <div class="brand-mark">৳</div>
       <p class="eyebrow">Personal finance</p>
-      <h1>Welcome back, Naina</h1>
-      <p class="muted">Sign in to view and update your land sale money.</p>
+      <h1>Welcome back</h1>
+      <p class="muted">Sign in to view your private financial records.</p>
       <form id="login-form">
         <label>User ID<input id="username" autocomplete="username" required placeholder="Enter your user ID"></label>
         <label>Password
@@ -39,10 +39,11 @@
         <a href="#expenses" data-page="expenses"><span>▾</span> Expenses / Spend</a>
         <a href="#loans" data-page="loans"><span>⇄</span> Loans</a>
         <a href="#savings" data-page="savings"><span>🏦</span> Savings & FDR</a>
+        <a href="#accounts" data-page="accounts"><span>▣</span> Other bank accounts</a>
         <a href="#land" data-page="land"><span>◇</span> Land fund</a>
         <a href="#settings" data-page="settings"><span>⚙</span> Backup & settings</a>
       </nav>
-      <div class="sidebar-foot"><div class="avatar">N</div><div><b>Naina</b><small>Owner</small></div><button id="logout" title="Log out">↪</button></div>
+      <div class="sidebar-foot"><div id="profile-avatar" class="avatar">N</div><div><b id="profile-name">Naina</b><small id="profile-role">Owner</small></div><button id="logout" title="Log out">↪</button></div>
     </aside>
 
     <main>
@@ -73,6 +74,7 @@
 
         <section id="loans-page" class="page"><div class="section-intro"><div><h1>Loan tracker</h1><p>Money given, received, and still pending.</p></div></div><div class="stats compact" id="loan-stats"></div><div id="loan-list" class="record-grid"></div></section>
         <section id="savings-page" class="page"><div class="section-intro"><div><h1>Savings & FDR</h1><p>Protected money kept aside for the future.</p></div></div><div class="stats compact" id="saving-stats"></div><div id="saving-list" class="record-grid"></div></section>
+        <section id="accounts-page" class="page"><div class="section-intro"><div><h1>Other bank accounts</h1><p>Accounts recorded separately from savings and FDRs.</p></div></div><article class="panel"><div class="table-wrap"><table><thead><tr><th>Bank / branch</th><th>Account holder</th><th>Account number</th><th>Approx. balance</th><th>Notes</th></tr></thead><tbody id="bank-account-table"></tbody></table></div><div id="bank-account-empty" class="empty hidden">No other bank accounts recorded.</div></article></section>
         <section id="land-page" class="page"><div class="section-intro"><div><h1>Land sale fund</h1><p>The full journey of your land sale money.</p></div></div><div class="land-hero"><p class="eyebrow">Total land sale value</p><h2 id="land-original">৳0</h2><p>Received in two instalments: ৳25 lakh and ৳8.75 lakh.</p></div><div class="stats compact" id="land-stats"></div><article class="panel"><div class="panel-head"><div><p class="eyebrow">Fund history</p><h3>Land fund timeline</h3></div></div><div id="land-timeline" class="timeline"></div></article></section>
         <section id="settings-page" class="page"><div class="section-intro"><div><h1>Backup & settings</h1><p>Keep a safe copy of your records.</p></div></div><div class="settings-grid"><article class="panel setting-card"><span class="setting-icon">⇩</span><h3>Export backup</h3><p>Download all current records as a JSON backup file.</p><button id="export-data" class="secondary">Download backup</button></article><article class="panel setting-card"><span class="setting-icon">⇧</span><h3>Restore backup</h3><p>Restore records from a previously downloaded backup.</p><label class="secondary file-button">Choose backup<input id="import-data" type="file" accept="application/json"></label></article><article class="panel setting-card danger-card"><span class="setting-icon">↺</span><h3>Reset workbook data</h3><p>Replace changes with the original imported workbook records.</p><button id="reset-data" class="danger">Reset data</button></article></div><article class="panel privacy"><h3>Privacy note</h3><p>This GitHub Pages version stores records in your browser using local storage. Your changes do not sync between phones or computers. Export a backup regularly. The login prevents casual access, but static hosting cannot provide bank-level security.</p></article></section>
       </div>
