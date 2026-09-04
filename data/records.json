@@ -240,6 +240,17 @@
       "interestAmount": 0,
       "notes": "Noakhali",
       "person": ""
+    },
+    {
+      "id": 1788501177443,
+      "date": "2026-09-04",
+      "type": "Spend",
+      "details": "Fuad Research Paper",
+      "amountIn": 0,
+      "amountOut": 42000,
+      "interestAmount": 0,
+      "notes": "Conference Paper cost 290 Euro",
+      "person": ""
     }
   ],
   "loanAccounts": [
