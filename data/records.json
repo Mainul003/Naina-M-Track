@@ -262,6 +262,17 @@
       "interestAmount": 0,
       "notes": "For 3 month",
       "person": "Riaz"
+    },
+    {
+      "id": 1794562125993,
+      "date": "2026-11-12",
+      "type": "Loan Given",
+      "details": "Mamun loan",
+      "amountIn": 0,
+      "amountOut": 300000,
+      "interestAmount": 0,
+      "notes": "For 3 months",
+      "person": "Mamun"
     }
   ],
   "loanAccounts": [
@@ -283,7 +294,7 @@
     },
     {
       "name": "Mamun",
-      "given": 300000,
+      "given": 600000,
       "receivedPrincipal": 0,
       "interestEarned": 0,
       "status": "Pending",
