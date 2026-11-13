@@ -251,12 +251,23 @@
       "interestAmount": 0,
       "notes": "Conference Paper cost 290 Euro",
       "person": ""
+    },
+    {
+      "id": 1794562079742,
+      "date": "2026-11-12",
+      "type": "Loan Given",
+      "details": "Lend Money to Riaz",
+      "amountIn": 0,
+      "amountOut": 200000,
+      "interestAmount": 0,
+      "notes": "For 3 month",
+      "person": "Riaz"
     }
   ],
   "loanAccounts": [
     {
       "name": "Riaz",
-      "given": 200000,
+      "given": 400000,
       "receivedPrincipal": 100000,
       "interestEarned": 3200,
       "status": "Pending",
