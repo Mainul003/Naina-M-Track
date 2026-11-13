@@ -273,6 +273,17 @@
       "interestAmount": 0,
       "notes": "For 3 months",
       "person": "Mamun"
+    },
+    {
+      "id": 1794562173347,
+      "date": "2026-11-12",
+      "type": "Saving Withdrawn",
+      "details": "Received money from FDR",
+      "amountIn": 500000,
+      "amountOut": 0,
+      "interestAmount": 0,
+      "notes": "3 month fdr done",
+      "person": ""
     }
   ],
   "loanAccounts": [
