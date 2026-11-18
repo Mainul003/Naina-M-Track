@@ -8,7 +8,7 @@
       "details": "First land sale instalment",
       "amountIn": 2500000,
       "amountOut": 0,
-      "notes": "৳25 lakh received"
+      "notes": "à§³25 lakh received"
     },
     {
       "id": 2,
@@ -105,7 +105,7 @@
       "amountIn": 103200,
       "amountOut": 0,
       "interestAmount": 3200,
-      "notes": "৳1,00,000 principal + ৳3,200 interest",
+      "notes": "à§³1,00,000 principal + à§³3,200 interest",
       "person": "Riaz"
     },
     {
@@ -172,7 +172,7 @@
       "details": "Second land sale instalment",
       "amountIn": 875000,
       "amountOut": 0,
-      "notes": "৳8.75 lakh received"
+      "notes": "à§³8.75 lakh received"
     },
     {
       "id": 19,
@@ -271,6 +271,7 @@
       "amountIn": 0,
       "amountOut": 300000,
       "interestAmount": 0,
+      "dueDate": "2027-02-11",
       "notes": "For 3 months",
       "person": "Mamun"
     },
