@@ -260,6 +260,7 @@
       "amountIn": 0,
       "amountOut": 200000,
       "interestAmount": 0,
+      "dueDate": "2027-02-11",
       "notes": "For 3 month",
       "person": "Riaz"
     },
