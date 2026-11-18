@@ -208,6 +208,8 @@
       "details": "Loan to Mamun",
       "amountIn": 0,
       "amountOut": 100000,
+      "interestAmount": 0,
+      "dueDate": "2026-12-28",
       "notes": "Refundable, 3 months",
       "person": "Mamun"
     },
